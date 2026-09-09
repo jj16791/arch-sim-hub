@@ -1,0 +1,13 @@
+# Every venue this hub's session has run at.
+# status: "current" (drives the landing page content directly, url: "/")
+#      or "past" (archived at its own page; listed in the Previous sessions section)
+- slug: sc26-bof
+  title: "SC26 BoF"
+  meta: "Chicago, USA · November 2026"
+  status: current
+  url: "/"
+- slug: sca-hpcasia26
+  title: "SCA/HPCAsia26 BoF"
+  meta: "Osaka, Japan · 27 January 2026"
+  status: past
+  url: "/venues/sca-hpcasia26.html"

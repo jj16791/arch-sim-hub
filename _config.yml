@@ -1,7 +1,8 @@
-title: "SC26 BoF — Open-Source Computer Architecture Simulators"
+title: "Open-Source Architecture Simulators — Community Hub"
 description: >-
-  The State of Open-Source Computer Architecture Simulators: Shared Problems and
-  Community Action. An SC26 Birds of a Feather session, and its community hub.
+  A recurring Birds of a Feather session on the state of open-source computer
+  architecture simulators — shared problems and community action, carried from
+  venue to venue. Currently: SC26.
 # GitHub Pages project site: set baseurl to "/<repo-name>" and url to "https://<user>.github.io"
 baseurl: ""
 url: ""

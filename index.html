@@ -107,8 +107,20 @@ title: "SC26 BoF — Open-Source Computer Architecture Simulators"
     <ul class="clean">
       <li><strong>Prioritised problems &amp; next steps</strong> — posted here after the session.</li>
       <li><strong>Slides &amp; materials</strong> — links to panellist framings and resources.</li>
-      <li><strong><a href="{{ '/sca-hpcasia26-summary.html' | relative_url }}">SCA/HPCAsia26 summary</a></strong> — a
-        write-up of the previous iteration's discussion and takeaways.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="previous">
+  <div class="wrap">
+    <h2>Previous sessions</h2>
+    <p class="lead">This hub carries forward from venue to venue. Earlier sessions and their outcomes stay here.</p>
+    <ul class="clean">
+      {% for v in site.data.venues %}
+      {% if v.status == "past" %}
+      <li><a href="{{ v.url | relative_url }}"><strong>{{ v.title }}</strong></a> — {{ v.meta }}</li>
+      {% endif %}
+      {% endfor %}
     </ul>
   </div>
 </section>

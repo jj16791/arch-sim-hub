@@ -1,28 +1,42 @@
-# SC26 BoF — community hub (Jekyll site)
+# Open-Source Architecture Simulators — community hub (Jekyll site)
 
-The website for the SC26 Birds of a Feather *"The State of Open-Source Computer Architecture Simulators: Shared Problems and Community Action."* Built with [Jekyll](https://jekyllrb.com/) so it builds natively on GitHub Pages.
+The public hub for the recurring Birds of a Feather session on the state of open-source computer architecture simulators. Built with [Jekyll](https://jekyllrb.com/) so it builds natively on GitHub Pages. The landing page always carries whichever venue is current; past venues are archived and always reachable from the "Previous sessions" section.
 
 ## Structure
 
 ```
 _config.yml                     site settings (title, baseurl, url)
 Gemfile                         Ruby dependencies (github-pages gem)
-index.html                      landing page  (layout: default, home: true)
-sca-hpcasia26-summary.html      SCA/HPCAsia26 outcomes summary (layout: page)
+index.html                      landing page — the CURRENT venue's content (layout: default, home: true)
+venues/
+  sca-hpcasia26.html             archived venue page (layout: page)
 _layouts/
   default.html                  page skeleton: <head>, nav, content, footer
   page.html                     content pages: red hero from front matter + <main>
 _includes/
   head.html  nav.html  footer.html  dots.html   reusable partials
 _data/
-  themes.yml                    the six discussion themes (edit here to change cards)
+  themes.yml                    the current venue's discussion themes (edit here to change cards)
+  panel.yml                     the current venue's panel cards
+  venues.yml                    every venue this hub has run at — drives the "Previous sessions" list
 assets/css/
   main.scss                     the University of Bristol theme (compiled to main.css)
 ```
 
-**To change the themes**, edit `_data/themes.yml` — the cards on the landing page are generated from it.
+**To change the current venue's themes/panel**, edit `_data/themes.yml` / `_data/panel.yml`.
 **To change styling/branding**, edit `assets/css/main.scss`.
-**To add a page**, drop an `.html`/`.md` file with `layout: page` front matter (see the summary page).
+**To add a standalone page**, drop an `.html`/`.md` file with `layout: page` front matter (see `venues/sca-hpcasia26.html`).
+
+## Rolling the landing page to a new venue
+
+When the current venue concludes and a new one is confirmed:
+
+1. Move `index.html`'s content into `venues/<old-slug>.html` (front matter `layout: page`, same pattern as `venues/sca-hpcasia26.html`).
+2. In `_data/venues.yml`, flip that entry's `status` to `past` and set its `url` to `/venues/<old-slug>.html`.
+3. Write the new venue's content into `index.html` (hero, about, themes, format, panel, outcomes — themes/panel come from `_data/themes.yml` / `_data/panel.yml`, so update those too).
+4. Add the new venue's entry to `_data/venues.yml` with `status: current` and `url: "/"`.
+
+The "Previous sessions" section on the landing page loops `site.data.venues` for every `status: past` entry automatically — nothing else needs hand-editing.
 
 ## Run locally
 
@@ -43,10 +57,8 @@ Then open <http://localhost:4000>.
    - User/org site (`<user>.github.io`): `baseurl: ""`.
    - Project site (`<user>.github.io/<repo>`): `baseurl: "/<repo>"`.
    (All internal links use `relative_url`, so they follow `baseurl` automatically.)
-3. Push. In the repo, **Settings → Pages → Build and deployment → Source: Deploy from a branch**, pick the branch and folder. GitHub Pages builds the Jekyll site automatically — no Actions needed.
+3. Push. In the repo, **Settings → Pages → Build and deployment → Source: Deploy from a branch**, pick the branch and folder. GitHub Pages builds the Jekyll site automatically — no Actions needed. Note: on a free GitHub plan, Pages can only build from a **public** repo, so flip visibility before enabling Pages.
 
 ## Branding
 
 University of Bristol identity: University Red (`#a6192e`) primary, grey (`#e5e6e5`) call-out panels, Sora headings / Open Sans body, and the Three Dots motif in the hero. Colours and type live in `assets/css/main.scss`.
-
-*Still a draft: panellist names are held until the line-up is locked; the contribution guide and post-SC channel are placeholders.*
