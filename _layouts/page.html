@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<header class="hero">
+  <div class="wrap">
+    {% include dots.html %}
+    {% if page.eyebrow %}<span class="eyebrow">{{ page.eyebrow }}</span>{% endif %}
+    <h1>{{ page.heading | default: page.title }}</h1>
+    {% if page.meta %}<p class="meta">{{ page.meta }}</p>{% endif %}
+  </div>
+</header>
+<main>
+  <div class="wrap">
+    {{ content }}
+  </div>
+</main>

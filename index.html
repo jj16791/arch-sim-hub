@@ -1,0 +1,134 @@
+---
+layout: default
+home: true
+title: "SC26 BoF — Open-Source Computer Architecture Simulators"
+---
+<header class="hero">
+  <div class="wrap">
+    {% include dots.html %}
+    <span class="eyebrow">Birds of a Feather · SC26</span>
+    <h1>The State of Open-Source Computer Architecture Simulators</h1>
+    <p class="sub">Shared problems and community action. A working session bringing together users and developers across
+      the whole open-source simulation community to turn shared problems into community-owned next steps.</p>
+    <div class="facts">
+      <span class="chip"><strong>SC26</strong> · Chicago</span>
+      <span class="chip">November 2026</span>
+      <span class="chip">60-minute BoF</span>
+      <span class="chip">Ref. <strong>BoF197s1</strong></span>
+      <span class="chip">Day &amp; time <strong>TBC</strong></span>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap">
+    <h2>About this session</h2>
+    <p class="lead">This BoF builds on our SCA/HPCAsia26 session, where we mapped the shared problems facing open-source
+      computer architecture simulators. This time the aim is to move from <em>naming</em> those problems to
+      <em>acting</em> on them.
+    </p>
+    <div class="two-col">
+      <div>
+        <h3>Whole-community by design</h3>
+        <p>The discussion intends to serve the entire open-source architecture-simulation community, that includes both
+          users and developers of many kinds of tools (cycle-level, functional, network/PDES, emulation, ML-driven, and
+          more), rather than any single niche.</p>
+      </div>
+      <div>
+        <h3>Action, not just discussion</h3>
+        <p>Potential discussion topics are framed to lead towards something the community can collectively do, and
+          everything we agree is captured here so the outcomes reach people who couldn't be in the room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="themes" class="alt">
+  <div class="wrap">
+    <h2>Possible discussion themes</h2>
+    <p class="lead">Whilst the session will encourage audience participation to guide the BoF's content, a selection of
+      themes have been curated to serve as possible discussion starting points.</p>
+    <div class="grid">
+      {% for t in site.data.themes %}
+      <div class="card">
+        <div class="num">{{ t.num }}</div>
+        <h3>{{ t.title }}</h3>
+        <p>{{ t.desc }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="format">
+  <div class="wrap">
+    <h2>Format</h2>
+    <p class="lead">An interactive, discussion-led session: short panellist presentations, then most of the hour
+      for the room to talk, prioritise, and identify actionable ways forward.</p>
+    <ul class="run">
+      <li><span class="time">0–5 min</span> <span><strong>Welcome &amp; framing</strong> — the goal, and a recap of what
+          SCA/HPCAsia26 surfaced.</span></li>
+      <li><span class="time">5–23 min</span> <span><strong>Panellist presentations</strong> — short introductions and
+          perspectives.</span></li>
+      <li><span class="time">23–25 min</span> <span><strong>Setting the agenda</strong> — review of primary discussion
+          topics from pre-generated and audience-steered themes.</span></li>
+      <li><span class="time">25–50 min</span> <span><strong>Moderated discussion</strong> — working through the themes,
+          with live audience input.</span></li>
+      <li><span class="time">50–60 min</span> <span><strong>Converge</strong> — agree the priorities and next steps,
+          captured live into this hub.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section id="panel" class="alt">
+  <div class="wrap">
+    <h2>Panel &amp; organisers</h2>
+    <p class="lead">Organised by Jack Jones (University of Bristol) and Jens Domke (RIKEN Center for Computational
+      Science).</p>
+    <p class="lead">A deliberately balanced group — across the US, Asia and Europe, and across tool developers and
+      users.</p>
+    <div class="grid">
+      {% for p in site.data.panel %}
+      <div class="card">
+        <h3>{{ p.name }}</h3>
+        <div class="aff">{{ p.affiliation }} · {{ p.region }}</div>
+        <p>{{ p.blurb }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section id="outcomes">
+  <div class="wrap">
+    <h2>Outcomes</h2>
+    <p class="lead">This hub is where the session's outputs live, so the discussion and takeaways reach the wider
+      community, not just the people in the room.</p>
+    <ul class="clean">
+      <li><strong>Prioritised problems &amp; next steps</strong> — posted here after the session.</li>
+      <li><strong>Slides &amp; materials</strong> — links to panellist framings and resources.</li>
+      <li><strong><a href="{{ '/sca-hpcasia26-summary.html' | relative_url }}">SCA/HPCAsia26 summary</a></strong> — a
+        write-up of the previous iteration's discussion and takeaways.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contribute" class="alt">
+  <div class="wrap">
+    <h2>Get involved</h2>
+    <p class="lead">How this community might work together best is itself one of the outcomes the BoF. The mechanisms
+      below are planned to be agreed at the session and generated here.</p>
+    <div class="two-col">
+      <div>
+        <h3>Contribute</h3>
+        <p>A shared way for people to add tools, resources and priorities. The exact mechanism is one of the things the
+          session will decide, and we'll format and publish it here as a BoF outcome.</p>
+      </div>
+      <div>
+        <h3>Stay in touch</h3>
+        <p>A channel to keep the discussion going beyond SC26. It will be established as part of the session's outcomes
+          and posted here.</p>
+      </div>
+    </div>
+  </div>
+</section>

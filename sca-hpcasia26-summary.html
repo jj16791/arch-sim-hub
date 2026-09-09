@@ -1,0 +1,71 @@
+---
+layout: page
+title: "SCA/HPCAsia26 BoF Summary — Open-Source Simulation Software"
+heading: "The State of Open-Source Simulation Software: what do we have, what do we need, and what do we want?"
+eyebrow: "SCA/HPCAsia 2026 · Birds of a Feather"
+meta: "Osaka, Japan · 27 January 2026 · a short public record of the session"
+---
+<p>This is a short public record of the Birds of a Feather session on the state of open-source computer architecture
+  simulation, so its discussion and takeaways reach beyond the room. The session saw a panel of five experts present
+  their role in the community, and their thoughts on the open-source architectural simulation landscape, alongside an
+  open discussion with the attending audience members. </p>
+
+<h2>What the session set out to do</h2>
+<p>The BoF put three questions to the open-source simulation community: <strong>what do we have, what do we need, and
+    what do we want</strong>? The motivation came from the community's own recurring complaints heard consistently
+  across various research venues. Simulators are too slow or too hard to learn, thin documentation, tools that are hard
+  to adapt, a fragmented landscape, and little structural incentive for researchers to build sustainable, validated,
+  well-documented tooling.</p>
+
+<p>The state of open-source tooling was taken through an optimistic perspective, we have capable tools, but the question
+  is how to refine, combine and extend them, on both the user and developer sides.</p>
+
+<h2>What the panel brought</h2>
+<ul>
+  <li><strong>Adolfy Hoisie (Brookhaven National Laboratory)</strong> surveyed the well-defined modelling-and-simulation
+    methodologies alongside their trade-offs between speed, accuracy and generalisability, and argued for a new class of
+    open-source, AI-driven simulators built around a clear structure: model development, training sets, interfaces to
+    traditional simulators, verification and validation, extensibility, generality, and interfaces to LLM/agentic AI.
+    <span class="tag">What we want: open, AI-driven simulation infrastructure.</span>
+  </li>
+  <li><strong>Filippo Spiga (NVIDIA)</strong> framed open-source tools as a workable "middle ground" for co-design
+    between academic and industry partners and set out the next challenges: more sophisticated nested hierarchies,
+    treating the full system rather than units in isolation, composition and interoperability of tools, and a common
+    trace language.
+    <span class="tag">What we need: interoperability and a shared interchange language.</span>
+  </li>
+  <li><strong>Ron Brightwell (Sandia National Laboratories)</strong> presented the Structural Simulation Toolkit (SST)
+    and its goal of interoperable components, and, through the AGILE project, named the hard open problem: a full
+    system can be modelled in parts, but passing results between models of different fidelities, and understanding the
+    effect on accuracy, remains unsolved.
+    <span class="tag">What we need: multi-fidelity composition we can trust.</span>
+  </li>
+  <li><strong>Artur Podobas (KTH Royal Institute of Technology)</strong> asked whether we can combine approaches
+    (full-system simulation, RTL simulation, and FPGA-empowered simulation) for better precision, results, or speed.
+    <span class="tag">What we need: hybrid, combined simulation approaches.</span>
+  </li>
+  <li><strong>Yukinori Sato (Toyohashi University of Technology)</strong> offered his views on contending alternatives
+    for the <em>what we...</em> components contained within the BoF title. We have binary instrumentation as an
+    under-used alternative to the usual simulator/emulator, we need a push toward system-level modelling that captures
+    the cache, OS and software stack together rather than the architecture alone, and we want to make simulation fast
+    enough on real applications to carry results through to real-world deployment. He grounded the latter with a
+    concrete example: cycle-accurate simulation of a Gemmini accelerator driven by custom RISC-V instructions.
+    <span class="tag">What we want: simulation that reaches real-world deployment.</span>
+  </li>
+</ul>
+
+<h2>What the session concluded</h2>
+<div class="callout">There were broad agreements on the problems, but not yet a shared path forward or a mechanism to
+  coordinate one.</div>
+<p>The room surfaced many ideas that relate to problems rather than agreed directions of resolution. A few things came
+  through clearly:</p>
+<ul>
+  <li>Real progress will be most successful with a consistent communication medium rather than by occasional discussion
+    at, possibly niche, research venues. This may need to be <strong>championed by a committed few</strong>.</li>
+  <li>The most promising directions were <strong>asynchronous and concrete</strong>, agreeing a standard interoperation
+    (trace) language, or standing up a community-run hub for validating open-source simulation contributions, one
+    credible enough to be cited in publications as evidence for the claims a tool makes.</li>
+  <li>Whilst everyone wants this, the <strong>effort-in versus value-out payoff is poor</strong> until the work is
+    largely complete, and it attracts little academic credit along the way, which is precisely why it needs a
+    coordinated community effort rather than isolated individuals.</li>
+</ul>
