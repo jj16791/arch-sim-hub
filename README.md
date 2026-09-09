@@ -9,7 +9,7 @@ _config.yml                     site settings (title, baseurl, url)
 Gemfile                         Ruby dependencies (github-pages gem)
 index.html                      landing page — the CURRENT venue's content (layout: default, home: true)
 venues/
-  sca-hpcasia26.html             archived venue page (layout: page)
+  sca-hpcasia26-bof.html             archived venue page (layout: page)
 _layouts/
   default.html                  page skeleton: <head>, nav, content, footer
   page.html                     content pages: red hero from front matter + <main>
@@ -25,13 +25,13 @@ assets/css/
 
 **To change the current venue's themes/panel**, edit `_data/themes.yml` / `_data/panel.yml`.
 **To change styling/branding**, edit `assets/css/main.scss`.
-**To add a standalone page**, drop an `.html`/`.md` file with `layout: page` front matter (see `venues/sca-hpcasia26.html`).
+**To add a standalone page**, drop an `.html`/`.md` file with `layout: page` front matter (see `venues/sca-hpcasia26-bof.html`).
 
 ## Rolling the landing page to a new venue
 
 When the current venue concludes and a new one is confirmed:
 
-1. Move `index.html`'s content into `venues/<old-slug>.html` (front matter `layout: page`, same pattern as `venues/sca-hpcasia26.html`).
+1. Move `index.html`'s content into `venues/<old-slug>.html` (front matter `layout: page`, same pattern as `venues/sca-hpcasia26-bof.html`).
 2. In `_data/venues.yml`, flip that entry's `status` to `past` and set its `url` to `/venues/<old-slug>.html`.
 3. Write the new venue's content into `index.html` (hero, about, themes, format, panel, outcomes — themes/panel come from `_data/themes.yml` / `_data/panel.yml`, so update those too).
 4. Add the new venue's entry to `_data/venues.yml` with `status: current` and `url: "/"`.
