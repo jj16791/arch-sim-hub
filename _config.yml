@@ -3,9 +3,8 @@ description: >-
   A recurring Birds of a Feather session on the state of open-source computer
   architecture simulators — shared problems and community action, carried from
   venue to venue. Currently: SC26.
-# GitHub Pages project site: set baseurl to "/<repo-name>" and url to "https://<user>.github.io"
-baseurl: ""
-url: ""
+baseurl: "/arch-sim-hub"
+url: "https://jj16791.github.io"
 markdown: kramdown
 sass:
   style: compressed
