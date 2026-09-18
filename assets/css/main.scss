@@ -33,10 +33,16 @@ nav {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--border);
 }
-nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; }
-nav .brand { font-weight: 700; font-size: 15px; color: var(--red); letter-spacing: 0.2px; }
+nav .wrap { display: flex; align-items: center; justify-content: space-between; height: 60px; gap: 16px; }
+nav .brand { font-weight: 700; font-size: 15px; color: var(--red); letter-spacing: 0.2px; white-space: nowrap; flex-shrink: 0; }
 nav .brand:hover { text-decoration: none; }
-nav .links a { color: var(--ink); margin-left: 22px; font-size: 14px; font-weight: 600; }
+nav .links {
+  display: flex; align-items: center; white-space: nowrap;
+  overflow-x: auto; scrollbar-width: none; -ms-overflow-style: none;
+}
+nav .links::-webkit-scrollbar { display: none; }
+nav .links a { color: var(--ink); margin-left: 22px; font-size: 14px; font-weight: 600; flex-shrink: 0; }
+nav .links a:first-child { margin-left: 0; }
 nav .links a:hover { color: var(--red); text-decoration: none; }
 @media (max-width: 700px) { nav .links a { margin-left: 14px; font-size: 13px; } }
 
